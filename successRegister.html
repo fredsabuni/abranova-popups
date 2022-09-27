@@ -50,9 +50,9 @@
         const lastname = urlParams.get('lastname');
         const email = urlParams.get('email');
 
-        if(firstname!="" && firstname!=null){
-            if(lastname!="" && lastname!=null){
-                if(email!="" && email!=null){
+        if(!!firstname){
+            if(!!lastname){
+                if(!!email){
                     urlZapier = `https://hooks.zapier.com/hooks/catch/13445018/bci7zfw?firstname=${firstname}&lastname=${lastname}&email=${email}`
 
                     let xhr = new XMLHttpRequest();
@@ -60,6 +60,8 @@
                     xhr.send();
                 }
             } 
+        }else{
+            console.log("No Param Passed!");
         }
 
     </script>

@@ -50,12 +50,16 @@
         const lastname = urlParams.get('lastname');
         const email = urlParams.get('email');
 
-        if(firstname != "" || lastname != "" || email != ""){
-            urlZapier = `https://hooks.zapier.com/hooks/catch/13445018/bci7zfw?firstname=${firstname}&lastname=${lastname}&email=${email}`
+        if(firstname!="" && firstname!=null){
+            if(lastname!="" && lastname!=null){
+                if(email!="" && email!=null){
+                    urlZapier = `https://hooks.zapier.com/hooks/catch/13445018/bci7zfw?firstname=${firstname}&lastname=${lastname}&email=${email}`
 
-            let xhr = new XMLHttpRequest();
-            xhr.open('GET', urlZapier);
-            xhr.send();
+                    let xhr = new XMLHttpRequest();
+                    xhr.open('GET', urlZapier);
+                    xhr.send();
+                }
+            } 
         }
 
     </script>

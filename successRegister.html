@@ -50,7 +50,8 @@
         const lastname = urlParams.get('lastname');
         const email = urlParams.get('email');
 
-        if(!!firstname){
+        console.log(email);
+        if(!!firstname  ){
             if(!!lastname){
                 if(!!email){
                     urlZapier = `https://hooks.zapier.com/hooks/catch/13445018/bci7zfw?firstname=${firstname}&lastname=${lastname}&email=${email}`
